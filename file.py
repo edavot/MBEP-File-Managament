@@ -11,3 +11,10 @@ def modify_file(file_name: str, content: str, overwrite: bool = False):
     mode = "w" if overwrite else "a"
     with open(file_name, mode) as file:
         file.write(content)
+
+def read_file(file_mane: str) ->  str:
+    """  Lectura de archivos """
+    content = ""
+    with open(file_mane, "r") as file:
+        content += file.readline()
+    return content
